@@ -40,7 +40,7 @@ use List::Util qw(min max);
 
 #The script requires a header with the IDs in the right order and very specific VEP annotation (see the associated file for an example header output from the VEP, and the annotation sources)
 #The output will be vcf by default; add "tab" to command line to get tabulated file
-#The "ukbb" setting means the script will only output the variants, it won't look at all the individual genotypes (important for very large datasets with hundreds of thousands of participants)
+#The "ukbb" setting means the script will only output the variants, it won't output all the individual genotypes (important for very large datasets with hundreds of thousands of participants)
 #The "ukbb" setting will also prevent the script from carrying out the private frequency test
 #The "ukbb" setting will use the maximum MAF from all populations and all databases, otherwise the script will assume the Non-Finnish European setting and will check GnomAD first, then the 1000 Genomes project, then TopMed, then ESP6500
 #Gene-specific CADD threshold scores come from PMID: 26820543; use "set-cadd" to keep cadd threshold at 25 for all genes. 
