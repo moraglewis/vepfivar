@@ -32,7 +32,7 @@ use List::Util qw(min max);
 #this script takes a vep-annotated file and outputs the variants passing the input filter settings
 #filter settings: minor allele frequency (0-1), impact ("high", "low", "none")
 #if no MAF filter is required, use 1
-#The maximum MAF from all populations and all databases for each variant will be tested against the filter setting
+#The MAF is taken from the gnomAD AF grpmax - this is the maximum allele frequency across all populations in gnomAD (genomes)
 #The pathogenicity filter is whether a variant is predicted to be a high impact variant (according to CADD (>25), SpliceAI (>0.5), UTRAnnotator (scoring based on https://academic.oup.com/bioinformatics/article/37/8/1171/5905476 and https://www.nature.com/articles/s41467-019-10717-9) or AlphaMissense (>0.564), a low-impact variant (anything within a gene or which has a high ReMM score (>0.95) outside a gene), or whether no impact filter is applied
 
 #A private allele frequency test is carried out to check the input cohort and filter out any variants present at a frequency over MAF+0.4. This can be deactivated by using the "ukbb" setting, although that also means the calls won't be output
